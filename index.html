@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/rain_bk3.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Serif&family=Roboto&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/index.css" />
+    <script type="module" src="./script/index.js" defer></script>
+    <script>
+      function changeInputBg(event) {
+        document
+          .querySelectorAll(".test__text__label")
+          .forEach((elem) => elem.classList.remove("checked"));
+        event.target.closest("label").classList.add("checked");
+        document.getElementById("btn_submit").disabled = false;
+      }
+    </script>
+    <title>Тест на уровень IQ</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header__bg">
+        <div class="wrapper">
+          <div class="header">
+            <nav class="burger-menu">
+              <input id="menu__toggle" type="checkbox" />
+              <label class="menu__btn" for="menu__toggle">
+                <span></span>
+              </label>
+              <div class="menu__box">
+                <ul class="wrapper">
+                  <li><a class="menu__item" href="/">Главная</a></li>
+                  <li>
+                    <button id="link-to-details" class="menu__item">Информация о тесте</button>
+                  </li>
+                  <li>
+                    <button id="start-test" class="menu__item">
+                      Пройти тест
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="header__title hide">
+              <img src="./img/rain_bk3.png" alt="test IQ" />
+              <h1>тест на определение IQ</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main__bg">
+        <section class="start_page">
+          <div class="wrapper">
+            <p class="start_page__top-text">Пройдите точный и быстрый</p>
+            <h1 class="start_page__title">тест на определение IQ</h1>
+            <img class="brain-img" src="./img/rain_bk3.png" alt="test IQ" />
+            <button class="start btn-primary">пРойти тест</button>
+            <p class="start_page__main-text">
+              <span
+                >И получите рекомендации по развитию своего интеллекта
+              </span>
+              <br />
+              и улучшению финансового благосостояния и личной жизни
+            </p>
+            <button class="details_btn">
+              <svg
+                class="rotateSvg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="8" cy="8" r="8" fill="white" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.45453 11.6364L8.45453 6.10454L10.9954 8.64545L11.6364 8L7.99999 4.36363L4.36362 8L5.00453 8.6409L7.54544 6.10454L7.54544 11.6364L8.45453 11.6364Z"
+                  fill="#0C0B10"
+                />
+              </svg>
+              <p>Подробнее</p>
+            </button>
+          </div>
+        </section>
+        <section id="details" class="details hide">
+          <div class="details__top_bg">
+            <div class="details__top wrapper">
+              <svg
+                width="24"
+                height="23"
+                viewBox="0 0 24 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="quotes_top"
+              >
+                <path
+                  d="M5.84845 22.65C4.84845 22.65 3.91512 22.2667 3.04845 21.5C2.21512 20.7 1.54845 19.6667 1.04845 18.4C0.581788 17.1333 0.34845 15.7833 0.34845 14.35C0.34845 12.15 0.731785 10.0833 1.49845 8.14999C2.29845 6.18332 3.26512 4.53332 4.39845 3.19999C5.53179 1.83332 6.61512 0.866655 7.64845 0.299988H7.69846L9.44846 1.89999V2.59999C8.61512 3.36665 7.83178 4.46665 7.09845 5.89999C6.36512 7.29999 5.99845 9.03332 5.99845 11.1C5.99845 12.1667 6.14846 13.0333 6.44846 13.7C6.74846 14.3667 7.19845 15.1 7.79845 15.9C8.29845 16.5333 8.66512 17.0833 8.89845 17.55C9.13179 18.0167 9.24845 18.5833 9.24845 19.25C9.24845 20.25 8.91512 21.0667 8.24845 21.7C7.61512 22.3333 6.81512 22.65 5.84845 22.65ZM19.7485 22.65C18.7485 22.65 17.8318 22.2667 16.9985 21.5C16.1651 20.7 15.4985 19.6667 14.9985 18.4C14.5318 17.1333 14.2985 15.7833 14.2985 14.35C14.2985 12.15 14.6818 10.0833 15.4485 8.14999C16.2485 6.18332 17.2151 4.51665 18.3484 3.14999C19.4818 1.78332 20.5651 0.83332 21.5984 0.299988H21.6485L23.3484 1.89999V2.59999C22.5151 3.36665 21.7318 4.46665 20.9985 5.89999C20.2651 7.29999 19.8985 9.03332 19.8985 11.1C19.8985 12.1667 20.0485 13.0333 20.3484 13.7C20.6484 14.3667 21.0985 15.1 21.6985 15.9C22.1985 16.5333 22.5651 17.0833 22.7985 17.55C23.0318 18.0167 23.1485 18.5833 23.1485 19.25C23.1485 20.25 22.8151 21.0667 22.1485 21.7C21.5151 22.3333 20.7151 22.65 19.7485 22.65Z"
+                  fill="white"
+                />
+              </svg>
+              <p class="details__top__content">
+                Профессиональный IQ-тест позволяет не только определить
+                коэффициент вашего интеллекта, но и выработать список
+                рекомендаций для повышения этого показателя.
+              </p>
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="quotes_bottom"
+              >
+                <path
+                  d="M17.5 -2.71837e-05C18.5 -2.70963e-05 19.4333 0.383308 20.3 1.14997C21.1333 1.94998 21.8 2.98331 22.3 4.24997C22.7667 5.51664 23 6.86664 23 8.29998C23 10.5 22.6167 12.5666 21.85 14.5C21.05 16.4666 20.0833 18.1166 18.95 19.45C17.8167 20.8166 16.7333 21.7833 15.7 22.35L15.65 22.35L13.9 20.75L13.9 20.05C14.7333 19.2833 15.5167 18.1833 16.25 16.75C16.9833 15.35 17.35 13.6166 17.35 11.55C17.35 10.4833 17.2 9.61664 16.9 8.94997C16.6 8.28331 16.15 7.54997 15.55 6.74998C15.05 6.11664 14.6833 5.56664 14.45 5.09997C14.2167 4.63331 14.1 4.06664 14.1 3.39997C14.1 2.39997 14.4333 1.58331 15.1 0.949973C15.7333 0.31664 16.5333 -2.72682e-05 17.5 -2.71837e-05ZM3.59999 -2.83989e-05C4.59999 -2.83115e-05 5.51666 0.383307 6.34999 1.14997C7.18333 1.94997 7.85 2.98331 8.35 4.24997C8.81667 5.51664 9.05 6.86664 9.05 8.29997C9.05 10.5 8.66666 12.5666 7.89999 14.5C7.1 16.4666 6.13333 18.1333 5 19.5C3.86667 20.8666 2.78333 21.8166 1.75 22.35L1.7 22.35L1.39876e-07 20.75L2.01072e-07 20.05C0.833332 19.2833 1.61666 18.1833 2.34999 16.75C3.08333 15.35 3.45 13.6166 3.45 11.55C3.45 10.4833 3.3 9.61664 3 8.94997C2.7 8.28331 2.25 7.54997 1.65 6.74997C1.15 6.11664 0.783323 5.56664 0.549989 5.09997C0.316658 4.63331 0.199999 4.06664 0.199999 3.39997C0.199999 2.39997 0.533333 1.58331 1.2 0.949972C1.83333 0.316639 2.63333 -2.84834e-05 3.59999 -2.83989e-05Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="details__center">
+            <div class="wrapper">
+              <p>
+                Также по результатам теста
+                <strong>вы получите</strong> подробные
+                <strong>советы</strong> по определению наиболее перспективной
+                <strong
+                  >для вашего типа <span>интеллекта</span> сферы
+                  деятельности</strong
+                >, которая принесет вам скорейший финансовый результат.
+              </p>
+              <img src="./img/325-01.png" alt="test IQ" />
+              <button class="start btn-primary">пройти тест</button>
+            </div>
+          </div>
+          <div class="details__bottom_bg">
+            <div class="details__bottom">
+              <div class="wrapper">
+                <p>
+                  Прохождение теста займет у вас не более <span>12 минут</span>,
+                  а его результаты вы сможете
+                  <span>использовать всю жизнь.</span>
+                </p>
+                <p>
+                  Профессиональная интерпретация и детально
+                  <strong>проработанные рекомендации</strong> позволят вам
+                  качественно
+                  <strong>изменить все аспекты своей жизни:</strong> от
+                  финансового до любовного.
+                </p>
+                <button class="start btn-primary btn-primary-grey">
+                  пройти тест
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer__bg">
+        <div class="wrapper">
+          <p class="footer__text-hiden hide">
+            TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN
+            FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,
+          </p>
+          <p class="footer__text">&#169; 2019</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
