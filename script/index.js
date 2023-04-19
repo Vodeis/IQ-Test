@@ -59,7 +59,7 @@ function nextTest() {
           ? `<img class='img' src="${tests[page].img}" alt="img"/>`
           : ""
       }
-      <div class="inputs_container">
+      <div class="inputs_container wrapper">
          ${
            tests[page].layout !== "color"
              ? tests[page].answers
@@ -204,7 +204,7 @@ function renderData(data) {
         <li class="field">${key}:</br> ${data[key]
           .map(
             (link) =>
-              `<a class="data" href=${link}>
+              `<a class="data" target="_blank" href=${link}>
             ${link}
           </a>`
           )
@@ -215,7 +215,7 @@ function renderData(data) {
       } else if (data[key].indexOf("https") !== -1) {
         itemsList += `
         <li class="field">${key}: 
-          <a href=${element} class="data">${element}</a>
+          <a href=${element} target="_blank" class="data">${element}</a>
         </li>`;
       } else {
         itemsList += `
