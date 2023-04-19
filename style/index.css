@@ -201,6 +201,7 @@ label:hover {
   width: 100%;
   height: 46px;
   position: fixed;
+  z-index: 1;
 }
 
 .header {
@@ -527,6 +528,10 @@ label:hover {
   transition: 0.2s all linear;
 }
 
+.test__form input:focus {
+  border: 3px solid #FFC700;
+}
+
 .test__form input:checked {
   background: blue;
 }
@@ -578,6 +583,10 @@ label:hover {
   top: -2px;
 }
 
+.test__form.number input:focus {
+  border: 2px solid #FFC700;
+}
+
 .test__form.number input:checked {
   border: 5px solid #FFC700;
 }
@@ -605,6 +614,11 @@ label:hover {
   margin-right: 0;
   border: 6px solid transparent;
 }
+
+.test__form.color .inputs_container input:focus {
+  border-color: #F2F3F3;
+}
+
 
 .test__form.color .inputs_container input:checked {
   border-color: #FFC700;

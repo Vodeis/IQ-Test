@@ -100,6 +100,7 @@ function nextTest() {
     </button>
 `;
     const btnSubmit = document.getElementById("btn_submit");
+    document.querySelector("input").focus();
     btnSubmit.addEventListener("click", nextTest);
     if (btnSubmit) btnSubmit.disabled = true;
     page++;
